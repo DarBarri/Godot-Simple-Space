@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lorenzos_Music_-_01_-_Astronaut.mp3-0ce84bb1895f2e11de35c58e31fdab04.mp3str"
+
+[deps]
+
+source_file="res://sounds/Lorenzos_Music_-_01_-_Astronaut.mp3"
+dest_files=[ "res://.import/Lorenzos_Music_-_01_-_Astronaut.mp3-0ce84bb1895f2e11de35c58e31fdab04.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
