@@ -1,5 +1,5 @@
 extends Node
-
+var pop_sound = []
 enum TYPES {DEFAULT, SUN, BLACKHOLE, PLATFORM, STATION}
 var planet = load("res://Prefabs/Planet.tscn")
 enum game_state {MENU, PAUSE, GAME, DEATH}
@@ -11,8 +11,10 @@ var planet_spawn_number : int = 1
 var high_score : int
 
 func _ready():
+	
+	pop_sound = get_parent().findFilesInFolder("res://sounds/pop/");
 	screen_size = get_viewport().get_visible_rect().size
-	print(screen_size)
+	#print(screen_size)
 	pass
 
 func game_start(var high_score : int):
@@ -20,7 +22,7 @@ func game_start(var high_score : int):
 	var first_planet = planet.instance()
 	add_child_below_node(get_parent().get_child(2), first_planet)
 	first_planet.position = Vector2(370,1600)
-	first_planet.radius = rand_range(0.55, 1.2)
+	first_planet.radius = 1
 	first_planet.init(get_parent(), 0)
 	ChangeState(game_state.GAME)
 	
@@ -55,10 +57,13 @@ func spawn_planet(var type):
 	var new_planet = planet.instance()
 	match type:
 		TYPES.DEFAULT:
+			new_planet.audio_stream.set_stream(pop_sound[rand_range(0,pop_sound.size())])
 			new_planet.radius = rand_range(0.55, 1.2)
 		TYPES.BLACKHOLE:
+			new_planet.audio_stream.set_stream(pop_sound[rand_range(0,pop_sound.size())])
 			new_planet.radius = rand_range(0.7, 1.2)
 		TYPES.SUN:
+			new_planet.audio_stream.set_stream(pop_sound[rand_range(0,pop_sound.size())])
 			new_planet.radius = rand_range(0.5, 0.6)
 			
 	add_child_below_node(get_parent().get_child(2), new_planet)

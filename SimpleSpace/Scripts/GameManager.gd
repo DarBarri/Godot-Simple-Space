@@ -1,6 +1,7 @@
 extends Control
 
 var planetsIcon = [] 
+var pop_sound = []
 onready var Player = find_node("PlayerShip")
 onready var game_logic = find_node("GameLogic")
 onready var save_system = find_node("SaveSystem")
@@ -8,7 +9,7 @@ onready var score = find_node("score")
 
 func _ready(): 
 	Player.GM = self
-	planetsIcon = findPNGImagesInFolder("res://Textures/Planets/");
+	planetsIcon = findFilesInFolder("res://Textures/Planets/");
 	pass
 
 func BackgroundWasTapped():
@@ -30,16 +31,24 @@ func PlayerDead():
 	get_tree().reload_current_scene()
 	pass
 
-func findPNGImagesInFolder(path: String) -> Array:
+func remove_file_extension(file_path: String) -> String:
+	var file_name = file_path.get_file()
+	var dot_index = file_name.find_last(".")
+	if dot_index > -1:
+			file_name = file_name.substr(0, dot_index)
+	return file_name
+
+func findFilesInFolder(path: String) -> Array:
 	var png_images = []
-	var dir = Directory.new()
-	if dir.open(path) == OK:
+	var dir = Directory.new() 
+	if dir.open(path) == OK: 
 		dir.list_dir_begin()
-		var file_name = dir.get_next()
+		var file_name = dir.get_next()  
 		while file_name != "": 
 			file_name = dir.get_next()
-			if file_name.get_extension().to_lower() == "png":
-				var texture : Texture = load(path + "/" + file_name)
+			if file_name.get_extension() == "import":
+				file_name  = remove_file_extension(file_name)
+				var texture = load(path + file_name) 
 				png_images.append(texture)
 	return png_images
 

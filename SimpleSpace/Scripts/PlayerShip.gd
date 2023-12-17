@@ -32,7 +32,7 @@ func catched(var pl):
 		score = score + 1
 		GM.score_up(score)
 		pl.touched = true
-		isfly = false 
+	isfly = false 
 		
 	match type:
 		pl.TYPES.DEFAULT:
