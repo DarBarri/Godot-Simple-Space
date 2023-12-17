@@ -15,7 +15,7 @@ onready var tombstone = get_child(0).get_child(2)
 onready var orbit = get_child(0).get_child(1).get_child(0);
 onready var planet = get_child(0).get_child(0).get_child(0);
 onready var sphered_cube = get_child(0).get_child(0).get_child(1);
-onready var audio_stream = get_child(0).get_child(2)
+onready var audio_stream = get_child(0).get_child(3)
 
 func _ready():  
 	

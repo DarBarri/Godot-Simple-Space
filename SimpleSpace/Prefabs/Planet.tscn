@@ -57,14 +57,14 @@ texture = ExtResource( 3 )
 visible = false
 shape = SubResource( 2 )
 
-[node name="pop" type="AudioStreamPlayer" parent="Node2D"]
-stream = ExtResource( 8 )
-
 [node name="Tombstone" type="Sprite" parent="Node2D"]
 visible = false
 position = Vector2( 1, -82 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
+
+[node name="pop" type="AudioStreamPlayer" parent="Node2D"]
+stream = ExtResource( 8 )
 
 [node name="Tween" type="Tween" parent="Node2D"]
 
