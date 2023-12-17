@@ -9,10 +9,15 @@ onready var timer = get_child(0)
 var screen_size
 var planet_spawn_number : int = 1
 var high_score : int
+onready var pop = $pop
+
+
+onready var rng = RandomNumberGenerator.new()
 
 func _ready():
 	
 	pop_sound = get_parent().findFilesInFolder("res://sounds/pop/");
+	
 	screen_size = get_viewport().get_visible_rect().size
 	#print(screen_size)
 	pass
@@ -52,32 +57,36 @@ func _process(delta):
 		on_death()
 	pass
 
-func spawn_planet(var type):	
+func spawn_planet(var type):
 	planet_spawn_number += 1
 	var new_planet = planet.instance()
 	match type:
 		TYPES.DEFAULT:
-			new_planet.audio_stream.set_stream(pop_sound[rand_range(0,pop_sound.size())])
+
+
 			new_planet.radius = rand_range(0.55, 1.2)
 		TYPES.BLACKHOLE:
-			new_planet.audio_stream.set_stream(pop_sound[rand_range(0,pop_sound.size())])
-			new_planet.radius = rand_range(0.7, 1.2)
-		TYPES.SUN:
-			new_planet.audio_stream.set_stream(pop_sound[rand_range(0,pop_sound.size())])
-			new_planet.radius = rand_range(0.5, 0.6)
 			
+			
+
+			new_planet.radius = rand_range(1.0, 1.2)
+		TYPES.SUN:
+
+			#new_planet.audio_stream = load("res://sounds/pop/pop1.ogg")
+			
+		
+			new_planet.radius = rand_range(0.5, 0.6)
+
 	add_child_below_node(get_parent().get_child(2), new_planet)
 	if(planet_spawn_number == high_score):
 		new_planet.tombstone_enable()
 	new_planet.init(get_parent(), planet_spawn_number, type)
-		
+
 	var offset = new_planet.get_pixel_size()/2
 	new_planet.position = Vector2(rand_range(offset,screen_size.x - offset),1800)
-	
-	pass
 
 func _on_Timer_timeout():
 	if(state == game_state.GAME):
-		spawn_planet(rand_range(0,3))
+		spawn_planet(rng.randi_range(0,2))
 		pass
 	pass 

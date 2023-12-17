@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Textures/orbit/curve.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Textures/Planets/curcle.png" type="Texture" id=5]
 [ext_resource path="res://Textures/orbit/star.png" type="Texture" id=6]
 [ext_resource path="res://Textures/orbit/extendring.png" type="Texture" id=7]
+[ext_resource path="res://sounds/pop/pop1.ogg" type="AudioStream" id=8]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 500.0
@@ -56,13 +57,14 @@ texture = ExtResource( 3 )
 visible = false
 shape = SubResource( 2 )
 
+[node name="pop" type="AudioStreamPlayer" parent="Node2D"]
+stream = ExtResource( 8 )
+
 [node name="Tombstone" type="Sprite" parent="Node2D"]
 visible = false
 position = Vector2( 1, -82 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D"]
 
 [node name="Tween" type="Tween" parent="Node2D"]
 

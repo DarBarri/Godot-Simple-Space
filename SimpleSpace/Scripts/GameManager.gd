@@ -6,10 +6,12 @@ onready var Player = find_node("PlayerShip")
 onready var game_logic = find_node("GameLogic")
 onready var save_system = find_node("SaveSystem")
 onready var score = find_node("score")
+onready var main_music = find_node("mainMusic")
 
 func _ready(): 
 	Player.GM = self
 	planetsIcon = findFilesInFolder("res://Textures/Planets/");
+	main_music.play()
 	pass
 
 func BackgroundWasTapped():
@@ -49,11 +51,13 @@ func findFilesInFolder(path: String) -> Array:
 			if file_name.get_extension() == "import":
 				file_name  = remove_file_extension(file_name)
 				var texture = load(path + file_name) 
+
 				png_images.append(texture)
 	return png_images
 
 func _on_Start_Button_gui_input():
 	find_node("menu").visible = false
+	main_music.stop()
 	Player.start()
 	game_logic.game_start(save_system.high_score)
 	pass

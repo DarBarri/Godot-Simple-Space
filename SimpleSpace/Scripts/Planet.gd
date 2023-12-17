@@ -15,9 +15,11 @@ onready var tombstone = get_child(0).get_child(2)
 onready var orbit = get_child(0).get_child(1).get_child(0);
 onready var planet = get_child(0).get_child(0).get_child(0);
 onready var sphered_cube = get_child(0).get_child(0).get_child(1);
-onready var audio_stream = get_child(0).get_child(3)
+onready var audio_stream = get_child(0).get_child(2)
 
 func _ready():  
+	
+
 	pass # Replace with function body.
 
 func get_pixel_size():
@@ -75,6 +77,7 @@ func killPlayer():
 
 func catchPlayer():
 	audio_stream.play()
+	print("play")
 	player.catched(self)
 
 func RelesePlayer():
