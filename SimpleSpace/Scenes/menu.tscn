@@ -78,21 +78,34 @@ anchor_bottom = 1.0
 anchor_top = 0.826
 anchor_right = 1.0
 anchor_bottom = 0.996
-margin_top = -0.280029
-margin_bottom = 0.119873
+margin_top = 2.71997
+margin_bottom = 3.11987
 rect_min_size = Vector2( 720, 100 )
 custom_fonts/normal_font = ExtResource( 5 )
 bbcode_enabled = true
 bbcode_text = "[center]Рекорд: 0"
 text = "Рекорд: 0"
 
+[node name="version_info" type="RichTextLabel" parent="menu"]
+anchor_top = 0.905
+anchor_right = 1.0
+anchor_bottom = 1.005
+margin_top = 64.6001
+margin_bottom = 36.6
+rect_min_size = Vector2( 720, 100 )
+rect_pivot_offset = Vector2( 347, 38.0001 )
+custom_fonts/normal_font = ExtResource( 5 )
+tab_size = 1
+text = "версия: ХЗ"
+
 [node name="TeamName" type="RichTextLabel" parent="menu"]
 anchor_top = 0.905
 anchor_right = 1.0
 anchor_bottom = 1.005
-margin_top = 0.599976
-margin_bottom = -0.400024
+margin_top = -20.3998
+margin_bottom = -21.3998
 rect_min_size = Vector2( 720, 100 )
+rect_pivot_offset = Vector2( 347, 38.0001 )
 custom_fonts/normal_font = ExtResource( 5 )
 bbcode_enabled = true
 bbcode_text = "[center] Kotyara Team 2023"

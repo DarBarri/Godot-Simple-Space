@@ -1,5 +1,5 @@
 extends Control
-
+ 
 var planetsIcon = [] 
 var pop_sound = []
 onready var Player = find_node("PlayerShip")
@@ -7,8 +7,10 @@ onready var game_logic = find_node("GameLogic")
 onready var save_system = find_node("SaveSystem")
 onready var score = find_node("score")
 onready var main_music = find_node("mainMusic")
+onready var version_info = find_node("version_info")
 
-func _ready(): 
+func _ready():  
+	version_info.text = "версия: " + ProjectSettings.get_setting("version/string") 
 	Player.GM = self
 	planetsIcon = findFilesInFolder("res://Textures/Planets/");
 	main_music.play()
