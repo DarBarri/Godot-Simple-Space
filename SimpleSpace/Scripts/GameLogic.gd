@@ -62,19 +62,11 @@ func spawn_planet(var type):
 	var new_planet = planet.instance()
 	match type:
 		TYPES.DEFAULT:
-
-
 			new_planet.radius = rand_range(0.55, 1.2)
 		TYPES.BLACKHOLE:
-			
-			
-
 			new_planet.radius = rand_range(1.0, 1.2)
 		TYPES.SUN:
-
-			#new_planet.audio_stream = load("res://sounds/pop/pop1.ogg")
-			
-		
+			#new_planet.audio_stream = load("res://sounds/pop/pop1.ogg")		
 			new_planet.radius = rand_range(0.5, 0.6)
 
 	add_child_below_node(get_parent().get_child(2), new_planet)

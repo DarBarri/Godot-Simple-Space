@@ -76,8 +76,7 @@ func killPlayer():
 	game_manager.PlayerDead()
 
 func catchPlayer():
-	audio_stream.play()
-	print("play")
+	audio_stream.play() 
 	player.catched(self)
 
 func RelesePlayer():

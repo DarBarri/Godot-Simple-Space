@@ -14,8 +14,7 @@ func config_create():
 
 func update_score(var new_score: int):
 	if(new_score > high_score):
-		high_score = new_score
-		print(new_score)
+		high_score = new_score 
 		config.set_value("ver1", "score", new_score) 
 		config.save("user://params.cfg")
 		best_score.bbcode_text  = "[center]Рекорд: " + String(high_score)
