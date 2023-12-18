@@ -38,6 +38,7 @@ script = ExtResource( 13 )
 script = ExtResource( 12 )
 
 [node name="Timer" type="Timer" parent="GameLogic"]
+one_shot = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2( 370, 1736 )

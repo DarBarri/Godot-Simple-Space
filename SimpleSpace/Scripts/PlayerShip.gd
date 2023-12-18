@@ -1,16 +1,17 @@
 extends KinematicBody2D
 
-export (int) var speed = 0
+export (int) var speed = 600
+var cur_speed = 0
 var velocity = Vector2()
 var isfly = false
 var planet = null
-var jump_speed = 1500  
-var rotation_speed = 2 
+var rotation_speed = 3.7
 var rotation_dir = 1
 var angle = 0
 var score = 0
 var GM
 var offset_modifier : float = 0
+
 func _ready():
 	var bitmap = BitMap.new()
 	var image = get_child(0).texture.get_data() 
@@ -25,11 +26,17 @@ func _ready():
 	# print(get_child(2).polygon.size())
 	# print(get_child_count())
 
+func change_rotation_speed(var rotation_speed):
+	self.rotation_speed = rotation_speed
+
+func change_move_speed(var speed):
+	self.speed = speed
+
 var offset
 func catched(var pl):
 	var type = pl.type
 	if(!pl.touched):
-		score = score + 1
+		score = pl.spawn_number
 		GM.score_up(score)
 		pl.touched = true
 	isfly = false 
@@ -62,11 +69,11 @@ func catched(var pl):
 
 func _physics_process(delta):
 	if(isfly): 
-		velocity = Vector2(transform.get_rotation(), speed * rotation_dir).rotated(angle)
+		velocity = Vector2(transform.get_rotation(), cur_speed * rotation_dir).rotated(angle)
 		move_and_slide(velocity)  
 	elif(planet):
 		offset += Vector2(offset_modifier,0)
-		angle += (3.4 - planet.radius) * delta * rotation_dir 
+		angle += (rotation_speed - planet.radius) * delta * rotation_dir 
 		transform = planet.transform * Transform2D().rotated(angle).translated(offset)
 		# transform = transform.scaled(Vector2(0.25,0.25))
 
@@ -77,6 +84,7 @@ func Release():
 		planet.RelesePlayer()
 		planet = null;
 		isfly = true
+	cur_speed = speed
 
 func Dead():
 	GM.PlayerDead()
@@ -89,7 +97,7 @@ func start():
 	get_parent().remove_child(self)
 	scene.add_child(self)
 	isfly = true
-	speed = 600
+	cur_speed = speed
 
 func get_pixel_size() -> float:
 	var ship_size = get_child(0).texture.get_size() 

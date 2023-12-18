@@ -17,10 +17,6 @@ config/custom_user_dir_name="ru.kotyarateam/ru.kotyarateam.simplespace"
 boot_splash/show_image=false
 config/icon="res://icon.png"
 
-[autoload]
-
-InputManager="res://GDTIM-v2_1_2/InputManager.gd"
-
 [display]
 
 window/size/width=720

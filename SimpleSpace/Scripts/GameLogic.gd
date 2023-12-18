@@ -3,39 +3,58 @@ var pop_sound = []
 enum TYPES {DEFAULT, SUN, BLACKHOLE, PLATFORM, STATION}
 var planet = load("res://Prefabs/Planet.tscn")
 enum game_state {MENU, PAUSE, GAME, DEATH}
-var state = game_state.MENU
-var Difficulty = 0
+var state = game_state.MENU 
 onready var timer = get_child(0)
 var screen_size
 var planet_spawn_number : int = 1
 var high_score : int
-onready var pop = $pop
+var player
 
+#speeds 
+var player_move_speed = 600
+var player_rotation_speed = 3.7
+var planet_speed = 200
+var spawn_interval = 3
 
 onready var rng = RandomNumberGenerator.new()
 
 func _ready():
-	
 	pop_sound = get_parent().findFilesInFolder("res://sounds/pop/");
-	
 	screen_size = get_viewport().get_visible_rect().size
 	#print(screen_size)
 	pass
 
-func game_start(var high_score : int):
+func set_difficulty():
+	player.change_rotation_speed(player_rotation_speed)
+	player.change_move_speed(player_move_speed)
+	pass
+
+func change_difficulty_by(var new_dif):
+	print("diif")
+	if(spawn_interval > 0.5): 
+		player_move_speed += new_dif * 5
+		player_rotation_speed += 0.05 * new_dif
+		planet_speed += new_dif * 8.2
+		spawn_interval -= 0.049 * new_dif
+		set_difficulty()
+	
+func game_start(var high_score : int): 
 	self.high_score = high_score
 	var first_planet = planet.instance()
 	add_child_below_node(get_parent().get_child(2), first_planet)
 	first_planet.position = Vector2(370,1600)
 	first_planet.radius = 1
-	first_planet.init(get_parent(), 0)
+	first_planet.init(get_parent(), 1, planet_speed, 0)
 	ChangeState(game_state.GAME)
 	
 func on_pause():
 	pass
-
+ 
+var prev_diff_planet = 3
 func on_game():
-	
+	if(planet_spawn_number > prev_diff_planet):
+		prev_diff_planet += 3
+		change_difficulty_by(1)
 	pass
 	
 func on_death():
@@ -45,7 +64,7 @@ func ChangeState(var new_state):
 	if(new_state != game_state.GAME):
 		timer.stop()
 	else:
-		timer.start(3)
+		timer.start(spawn_interval)
 	state = new_state
 
 func _process(delta):
@@ -67,12 +86,12 @@ func spawn_planet(var type):
 			new_planet.radius = rand_range(1.0, 1.2)
 		TYPES.SUN:
 			#new_planet.audio_stream = load("res://sounds/pop/pop1.ogg")		
-			new_planet.radius = rand_range(0.5, 0.6)
+			new_planet.radius = rand_range(0.6, 1)
 
 	add_child_below_node(get_parent().get_child(2), new_planet)
 	if(planet_spawn_number == high_score):
 		new_planet.tombstone_enable()
-	new_planet.init(get_parent(), planet_spawn_number, type)
+	new_planet.init(get_parent(), planet_spawn_number,planet_speed, type)
 
 	var offset = new_planet.get_pixel_size()/2
 	new_planet.position = Vector2(rand_range(offset,screen_size.x - offset),1800)
@@ -81,4 +100,5 @@ func _on_Timer_timeout():
 	if(state == game_state.GAME):
 		spawn_planet(rng.randi_range(0,2))
 		pass
+	timer.start(spawn_interval)
 	pass 

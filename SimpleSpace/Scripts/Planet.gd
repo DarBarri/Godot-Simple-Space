@@ -3,8 +3,7 @@ extends Node2D
 enum TYPES {DEFAULT, SUN, BLACKHOLE, PLATFORM, STATION}
 var hasTarget = false
 var TargetTexture
-var radius = 1
-var rotation_speed = 100
+var radius = 1 
 var type
 var move_speed = 200
 var player
@@ -19,7 +18,6 @@ onready var audio_stream = get_child(0).get_child(3)
 
 func _ready():  
 	
-
 	pass # Replace with function body.
 
 func get_pixel_size():
@@ -44,7 +42,11 @@ func generateRandomPastelColor() -> Color:
 	blue = (blue + mixBlue) / 3
 	return Color(red, green, blue, 1)
 
-func init(var GM, var s_number : int, var n_type : int = 0):
+func change_speed(var move_speed : int):
+	self.move_speed = move_speed
+
+func init(var GM, var s_number : int, var speed, var n_type : int = 1):
+	move_speed = speed
 	spawn_number = s_number
 	game_manager = GM
 	type = n_type
@@ -95,7 +97,8 @@ func _on_TouchScreenButton_released():
 	game_manager.PlanetWasTapped(self) 
 
 func _on_OrbitArea_body_entered(body): 
-	if(body.name == "PlayerShip" && player == null):
+	print(body.score, " ", spawn_number)
+	if(body.name == "PlayerShip" && player == null && body.score != spawn_number):
 		player = body
 		catchPlayer()
 

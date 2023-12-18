@@ -14,6 +14,7 @@ func _ready():
 	Player.GM = self
 	planetsIcon = findFilesInFolder("res://Textures/Planets/");
 	main_music.play()
+	game_logic.player = Player
 	pass
 
 func BackgroundWasTapped():
