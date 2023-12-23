@@ -35,7 +35,7 @@ texture = ExtResource( 5 )
 [node name="SunButt" type="Sprite" parent="Node2D/Planet"]
 visible = false
 position = Vector2( 0.00012207, 1.45519e-11 )
-scale = Vector2( 3, 3 )
+scale = Vector2( 6, 6 )
 texture = ExtResource( 6 )
 
 [node name="MoonButt" type="Sprite" parent="Node2D/Planet"]
