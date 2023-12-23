@@ -8,6 +8,7 @@ onready var save_system = find_node("SaveSystem")
 onready var score = find_node("score")
 onready var main_music = find_node("mainMusic")
 onready var version_info = find_node("version_info")
+onready var settings_panel = find_node("settings")
 
 func _ready():  
 	version_info.text = "версия: " + ProjectSettings.get_setting("version/string") 
@@ -28,8 +29,6 @@ func score_up(var new_score : int):
 	score.bbcode_text = "счёт: " + String(new_score)
 	pass
 
-func _process(delta):
-	pass
 
 func PlayerDead():
 	save_system.update_score(Player.score)
@@ -62,5 +61,6 @@ func _on_Start_Button_gui_input():
 	find_node("menu").visible = false
 	main_music.stop()
 	Player.start()
+	game_logic.sound_volume = settings_panel.sound_slider.value
 	game_logic.game_start(save_system.high_score)
 	pass

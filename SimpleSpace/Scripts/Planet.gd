@@ -42,8 +42,8 @@ func generateRandomPastelColor() -> Color:
 	blue = (blue + mixBlue) / 3
 	return Color(red, green, blue, 1)
 
-func change_speed(var move_speed : int):
-	self.move_speed = move_speed
+func change_speed(var mspeed : int):
+	move_speed = mspeed
 
 func init(var GM, var s_number : int, var speed, var n_type : int = 1):
 	move_speed = speed
@@ -66,6 +66,9 @@ func init(var GM, var s_number : int, var speed, var n_type : int = 1):
 		get_child(0).get_child(0).get_child(3).modulate = Color(0.6,0.6,0.6,1)
 			
 	get_child(0).scale = Vector2(radius,radius)
+
+func set_sound_volume(var vol : float):
+	audio_stream.volume_db = vol
 
 func tombstone_enable(): 
 	tombstone.visible = true
@@ -96,8 +99,7 @@ func _on_TouchScreenButton_released():
 	#get_child(0).visible = false
 	game_manager.PlanetWasTapped(self) 
 
-func _on_OrbitArea_body_entered(body): 
-	print(body.score, " ", spawn_number)
+func _on_OrbitArea_body_entered(body):  
 	if(body.name == "PlayerShip" && player == null && body.score != spawn_number):
 		player = body
 		catchPlayer()

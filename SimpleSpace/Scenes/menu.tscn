@@ -116,7 +116,6 @@ text = " Kotyara Team 2023"
 script = ExtResource( 8 )
 
 [node name="Setting Button" parent="menu" instance=ExtResource( 4 )]
-visible = false
 anchor_top = 0.721
 anchor_bottom = 0.814
 margin_top = -25.88
@@ -134,7 +133,7 @@ position = Vector2( 360, 420 )
 [node name="settings" parent="menu" instance=ExtResource( 9 )]
 visible = false
 
-[node name="mainMusic" type="AudioStreamPlayer" parent="."]
+[node name="mainMusic" type="AudioStreamPlayer" parent="menu"]
 stream = ExtResource( 14 )
 
 [connection signal="timeout" from="GameLogic/Timer" to="GameLogic" method="_on_Timer_timeout"]

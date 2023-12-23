@@ -26,11 +26,11 @@ func _ready():
 	# print(get_child(2).polygon.size())
 	# print(get_child_count())
 
-func change_rotation_speed(var rotation_speed):
-	self.rotation_speed = rotation_speed
+func change_rotation_speed(var rspeed):
+	rotation_speed = rspeed
 
-func change_move_speed(var speed):
-	self.speed = speed
+func change_move_speed(var move_speed):
+	speed = move_speed
 
 var offset
 func catched(var pl):

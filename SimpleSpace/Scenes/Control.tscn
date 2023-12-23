@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Button.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Fonts/Pionr.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/setting_panel.gd" type="Script" id=3]
 
-[node name="Control" type="Control"]
+[node name="settings" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -41,7 +44,51 @@ margin_right = 287.5
 margin_bottom = 364.0
 color = Color( 0.0901961, 0.815686, 0.882353, 1 )
 
-[node name="HSlider" type="HSlider" parent="ColorRect/ColorRect"]
-margin_top = 149.5
-margin_right = 574.0
-margin_bottom = 234.5
+[node name="sound" type="RichTextLabel" parent="ColorRect/ColorRect"]
+anchor_top = 0.302
+anchor_right = 0.986
+anchor_bottom = 0.389
+margin_top = -0.356018
+margin_right = 0.0499878
+margin_bottom = 0.307953
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center] Звуки"
+text = " Звуки"
+
+[node name="sound_slider" type="HSlider" parent="ColorRect/ColorRect"]
+anchor_top = 0.345
+anchor_right = 1.0
+anchor_bottom = 0.462
+margin_top = 0.339981
+margin_right = -1.0
+margin_bottom = 0.164001
+min_value = -80.0
+max_value = 0.0
+
+[node name="music" type="RichTextLabel" parent="ColorRect/ColorRect"]
+anchor_top = 0.128
+anchor_right = 0.986
+anchor_bottom = 0.216
+margin_top = 0.315994
+margin_right = 0.0499878
+margin_bottom = 0.251999
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center] Музыка"
+text = " Музыка"
+
+[node name="music_slider" type="HSlider" parent="ColorRect/ColorRect"]
+anchor_top = 0.172
+anchor_right = 0.998
+anchor_bottom = 0.288
+margin_top = -0.216003
+margin_right = 0.149963
+margin_bottom = 0.335983
+min_value = -80.0
+max_value = 0.0
+
+[connection signal="drag_ended" from="ColorRect/ColorRect/sound_slider" to="." method="_on_drag_ended"]
+[connection signal="value_changed" from="ColorRect/ColorRect/sound_slider" to="." method="_on_sound_value_changed"]
+[connection signal="drag_ended" from="ColorRect/ColorRect/music_slider" to="." method="_on_drag_ended"]
+[connection signal="value_changed" from="ColorRect/ColorRect/music_slider" to="." method="_on_music_slider_value_changed"]
