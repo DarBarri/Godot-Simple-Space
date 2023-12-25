@@ -43,5 +43,6 @@ func set_params():
 
 func _ready():
 	load_config() 
+	# best_score.bbcode_text = OS.get_user_data_dir()
 	best_score.bbcode_text  = "[center]Рекорд: " + String(high_score) 
 	pass 

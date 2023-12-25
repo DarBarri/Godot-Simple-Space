@@ -12,8 +12,7 @@ config_version=4
 
 config/name="Simple Space"
 run/main_scene="res://Scenes/menu.tscn"
-config/use_custom_user_dir=true
-config/custom_user_dir_name="ru.kotyarateam/ru.kotyarateam.simplespace"
+config/custom_user_dir_name="simplespace"
 boot_splash/show_image=false
 config/icon="res://icon.png"
 

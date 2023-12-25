@@ -45,6 +45,13 @@ func generateRandomPastelColor() -> Color:
 func change_speed(var mspeed : int):
 	move_speed = mspeed
 
+func reset():
+	get_child(0).get_child(0).get_child(2).visible = false;
+	get_child(0).get_child(0).get_child(3).visible = false;
+	sphered_cube.visible = false;
+	touched = false;
+	tombstone.visible = false;
+	
 func init(var GM, var s_number : int, var speed, var n_type : int = 1):
 	move_speed = speed
 	spawn_number = s_number
@@ -90,6 +97,7 @@ func RelesePlayer():
 func _on_VisibilityNotifier2D_viewport_exited(viewport): 
 	if(player != null):
 		killPlayer()
+	reset()
 	
 func _on_TouchScreenButton_pressed():
 	if hasTarget:

@@ -2,8 +2,10 @@ extends Node
 var pop_sound = []
 enum TYPES {DEFAULT, SUN, BLACKHOLE, PLATFORM, STATION}
 var planet = load("res://Prefabs/Planet.tscn")
+var planet_buffer = []
+var buffer_size : int = 10
 enum game_state {MENU, PAUSE, GAME, DEATH}
-var state = game_state.MENU 
+var state = game_state.MENU
 onready var timer = get_child(0)
 var screen_size
 var planet_spawn_number : int = 1
@@ -46,6 +48,7 @@ func game_start(var hscore : int):
 	first_planet.position = Vector2(370,1600)
 	first_planet.radius = 1
 	first_planet.init(get_parent(), 1, planet_speed, 0)
+	planet_buffer.append(first_planet)
 	ChangeState(game_state.GAME)
 	
 func on_pause():
@@ -79,7 +82,14 @@ func _process(delta):
 
 func spawn_planet(var type):
 	planet_spawn_number += 1
-	var new_planet = planet.instance()
+	var cur_buffer_size = planet_buffer.size()
+	var pPlace = (planet_spawn_number % buffer_size)
+	pPlace -= 1
+	if(buffer_size >= pPlace):
+		if(cur_buffer_size <= buffer_size):
+			planet_buffer.append(planet.instance())
+	
+	var new_planet = planet_buffer[pPlace]
 	match type:
 		TYPES.DEFAULT:
 			new_planet.radius = rand_range(0.55, 1.2)
@@ -96,7 +106,8 @@ func spawn_planet(var type):
 	new_planet.set_sound_volume(sound_volume)
 	var offset = new_planet.get_pixel_size()/2
 	new_planet.position = Vector2(rand_range(offset,screen_size.x - offset),1800)
-
+	planet_buffer[pPlace] = new_planet
+	
 func _on_Timer_timeout():
 	if(state == game_state.GAME):
 		spawn_planet(rng.randi_range(0,2))
