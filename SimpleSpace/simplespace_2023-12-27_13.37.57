@@ -1,0 +1,331 @@
+Godot Engine v3.5.1.rc.custom_build.eb3b3546a - https://godotengine.org
+OpenGL ES 2.0 Renderer: NVIDIA GeForce MX150/PCIe/SSE2
+ 
+ERROR: Error loading custom font 'res://Textures/Pionr .ttf'
+   at: initialize_theme (scene/register_scene_types.cpp:818) - Error loading custom font 'res://Textures/Pionr .ttf'
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@10 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@10 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@11 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@11 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@12 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@12 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@13 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@13 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@14 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@14 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@15 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@15 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@16 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@16 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@17 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@17 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@18 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@18 does not share a parent.
+diif
+ERROR: Can't add child 'Planet' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+ERROR: Can't add child '@Planet@10' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@10 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@10 does not share a parent.
+ERROR: Can't add child '@Planet@11' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@11 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@11 does not share a parent.
+diif
+ERROR: Can't add child '@Planet@12' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@12 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@12 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@27 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@27 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@28 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@28 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@29 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@29 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@30 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@30 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@39 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@39 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@48 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@48 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@49 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@49 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@50 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@50 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@51 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@51 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@52 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@52 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@53 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@53 does not share a parent.
+diif
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@62 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@62 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@63 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@63 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@72 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@72 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@73 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@73 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@74 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@74 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@75 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@75 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@76 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@76 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@77 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@77 does not share a parent.
+diif
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@86 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@86 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@87 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@87 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@96 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@96 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@97 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@97 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@106 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@106 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@107 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@107 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@108 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@108 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@109 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@109 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@118 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@118 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@119 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@119 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@120 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@120 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@121 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@121 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@122 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@122 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@123 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@123 does not share a parent.
+diif
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@132 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@132 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@133 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@133 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@142 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@142 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@143 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@143 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@144 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@144 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@145 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@145 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@146 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@146 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@147 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@147 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@148 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@148 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@149 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@149 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@150 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@150 does not share a parent.
+diif
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@159 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@159 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@160 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@160 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@169 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@169 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@170 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@170 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@171 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@171 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@172 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@172 does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@181 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@181 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@182 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@182 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@183 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@183 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@184 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@184 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@185 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@185 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@186 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@186 does not share a parent.
+diif
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@195 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@195 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@196 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@196 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@197 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@197 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@198 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@198 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@199 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@199 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@200 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@200 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@201 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@201 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@202 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@202 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@203 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@203 does not share a parent.
+diif
+ERROR: Can't add child 'Planet' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+ERROR: Can't add child '@Planet@195' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@195 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@195 does not share a parent.
+ERROR: Can't add child '@Planet@196' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@196 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@196 does not share a parent.
+diif
+ERROR: Can't add child '@Planet@197' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@197 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@197 does not share a parent.
+ERROR: Can't add child '@Planet@198' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@198 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@198 does not share a parent.
+ERROR: Can't add child '@Planet@199' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@199 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@199 does not share a parent.
+diif
+ERROR: Can't add child '@Planet@200' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@200 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@200 does not share a parent.
+ERROR: Can't add child '@Planet@201' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@201 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@201 does not share a parent.
+ERROR: Can't add child '@Planet@202' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as @Planet@202 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@202 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@204 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@204 does not share a parent.
+ERROR: Can't add child 'Planet' to 'GameLogic', already has a parent 'GameLogic'.
+   at: add_child (scene/main/node.cpp:1282) - Condition "p_child->data.parent" is true.
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@213 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@213 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@214 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@214 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@215 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@215 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@216 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@216 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@217 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@217 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@218 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@218 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@219 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@219 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@220 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@220 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@221 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@221 does not share a parent.
+diif
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@230 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@230 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@231 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@231 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@232 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@232 does not share a parent.
+diif
+WARNING: Cannot move under node GameLogic as @Planet@233 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@233 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@234 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@234 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@235 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@235 does not share a parent.
+diif
+/home/alex/.local/share/godot/app_userdata/Simple Space
+WARNING: Cannot move under node GameLogic as Planet does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as Planet does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@244 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@244 does not share a parent.
+WARNING: Cannot move under node GameLogic as @Planet@245 does not share a parent.
+   at: add_child_below_node (scene/main/node.cpp:1303) - Cannot move under node GameLogic as @Planet@245 does not share a parent.

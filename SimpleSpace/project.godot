@@ -8,11 +8,23 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+} ]
+_global_script_class_icons={
+"GitAPI": ""
+}
+
 [application]
 
-config/name="Simple Space"
+config/name="SimpleSpace"
+config/description="SimpleSpace - это простой аркадный симулятор, где вы управляете космическим кораблем и бороздите просторы вселенной!"
 run/main_scene="res://Scenes/menu.tscn"
-config/custom_user_dir_name="simplespace"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="ru.kotyarateam.ru.kotyarateam/simplespace/"
 boot_splash/show_image=false
 config/icon="res://icon.png"
 
@@ -31,6 +43,10 @@ window/stretch/aspect="keep_width"
 [filesystem]
 
 import/fbx/use_fbx=false
+
+[gdnative]
+
+singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
 
 [global]
 
@@ -52,6 +68,11 @@ pointing/emulate_touch_from_mouse=true
 2d_render/layer_3="money"
 2d_render/layer_4="station"
 
+[logging]
+
+file_logging/enable_file_logging=true
+file_logging/log_path="simplespace"
+
 [physics]
 
 common/enable_pause_aware_picking=true
@@ -61,10 +82,12 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
+threads/thread_model=2
+threads/thread_safe_bvh=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
 
 [version]
 
-string="1.1.8"
+string="1.2.8"

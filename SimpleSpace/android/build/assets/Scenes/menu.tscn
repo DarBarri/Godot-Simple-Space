@@ -1,0 +1,139 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Prefabs/menu/Up.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/PlayerShip.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/menu/MenuBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/menu/SettingButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Textures/Fonts/main.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Prefabs/menu/StartButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Textures/particle.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/StartButton.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Control.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/SettingButton.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/GameManager.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/GameLogic.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/SaveSystem.gd" type="Script" id=13]
+[ext_resource path="res://sounds/Lorenzos_Music_-_01_-_Astronaut.mp3" type="AudioStream" id=14]
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="Background" parent="." instance=ExtResource( 3 )]
+show_behind_parent = true
+light_mask = 0
+margin_left = 42.0
+margin_top = -24.0
+margin_right = -678.0
+margin_bottom = -1304.0
+
+[node name="SaveSystem" type="Node" parent="."]
+script = ExtResource( 13 )
+
+[node name="GameLogic" type="Node" parent="."]
+script = ExtResource( 12 )
+
+[node name="Timer" type="Timer" parent="GameLogic"]
+one_shot = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 370, 1736 )
+rotation = -1.5708
+amount = 200
+lifetime = 60.0
+preprocess = 100.0
+speed_scale = 0.6
+texture = ExtResource( 7 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 360 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 100.0
+initial_velocity_random = 0.6
+scale_amount = 0.04
+scale_amount_random = 0.05
+hue_variation_random = 1.0
+
+[node name="score" type="RichTextLabel" parent="."]
+anchor_right = 0.745
+anchor_bottom = 0.229
+margin_left = 80.0
+margin_top = 91.0
+margin_right = 263.6
+margin_bottom = -22.12
+rect_min_size = Vector2( 720, 100 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "счёт: 0"
+text = "счёт: 0"
+
+[node name="menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="record" type="RichTextLabel" parent="menu"]
+anchor_top = 0.826
+anchor_right = 1.0
+anchor_bottom = 0.996
+margin_top = 2.71997
+margin_bottom = 3.11987
+rect_min_size = Vector2( 720, 100 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center]Рекорд: 0"
+text = "Рекорд: 0"
+
+[node name="version_info" type="RichTextLabel" parent="menu"]
+anchor_top = 0.905
+anchor_right = 1.0
+anchor_bottom = 1.005
+margin_top = 64.6001
+margin_bottom = 36.6
+rect_min_size = Vector2( 720, 100 )
+rect_pivot_offset = Vector2( 347, 38.0001 )
+custom_fonts/normal_font = ExtResource( 5 )
+tab_size = 1
+text = "версия: ХЗ"
+
+[node name="TeamName" type="RichTextLabel" parent="menu"]
+anchor_top = 0.905
+anchor_right = 1.0
+anchor_bottom = 1.005
+margin_top = -20.3998
+margin_bottom = -21.3998
+rect_min_size = Vector2( 720, 100 )
+rect_pivot_offset = Vector2( 347, 38.0001 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "[center] Kotyara Team 2023"
+text = " Kotyara Team 2023"
+
+[node name="Start Button" parent="menu" instance=ExtResource( 6 )]
+script = ExtResource( 8 )
+
+[node name="Setting Button" parent="menu" instance=ExtResource( 4 )]
+anchor_top = 0.721
+anchor_bottom = 0.814
+margin_top = -25.88
+margin_bottom = 25.08
+script = ExtResource( 10 )
+
+[node name="Up" parent="menu" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 720.0
+
+[node name="PlayerShip" parent="menu" instance=ExtResource( 2 )]
+position = Vector2( 360, 420 )
+
+[node name="settings" parent="menu" instance=ExtResource( 9 )]
+visible = false
+
+[node name="mainMusic" type="AudioStreamPlayer" parent="menu"]
+stream = ExtResource( 14 )
+
+[connection signal="timeout" from="GameLogic/Timer" to="GameLogic" method="_on_Timer_timeout"]

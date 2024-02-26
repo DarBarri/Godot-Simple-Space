@@ -1,0 +1,6 @@
+Godot Engine v3.5.1.rc.custom_build.eb3b3546a - https://godotengine.org
+OpenGL ES 2.0 Renderer: NVIDIA GeForce MX150/PCIe/SSE2
+ 
+ERROR: Error loading custom font 'res://Textures/Pionr .ttf'
+   at: initialize_theme (scene/register_scene_types.cpp:818) - Error loading custom font 'res://Textures/Pionr .ttf'
+/home/alex/.local/share/godot/app_userdata/SimpleSpace

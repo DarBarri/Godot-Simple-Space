@@ -1,0 +1,10 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://Textures/Fonts/14502.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 170
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 57
+font_data = ExtResource( 1 )

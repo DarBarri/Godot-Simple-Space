@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://shaders/main.tres" type="Texture" id=1]
+[ext_resource path="res://Scripts/MenuBackground.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 720, 4000 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -4.0
+margin_right = 1680.0
+margin_bottom = 796.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 400 )
+rect_clip_content = true
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_top = 15.0
+margin_right = 1680.0
+margin_bottom = 815.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 0, 400 )
+rect_clip_content = true
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_top = 3345.0
+margin_right = 1680.0
+margin_bottom = 4145.0
+rect_rotation = -89.9999
+rect_pivot_offset = Vector2( 0, 400 )
+rect_clip_content = true
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_top = 3327.0
+margin_right = 1680.0
+margin_bottom = 4127.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 400 )
+rect_clip_content = true
+texture = ExtResource( 1 )
+expand = true
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( -441, -2016 )
+shape = SubResource( 1 )
+shape_visible = false
+
+[connection signal="released" from="TouchScreenButton" to="." method="_on_TouchScreenButton_released"]

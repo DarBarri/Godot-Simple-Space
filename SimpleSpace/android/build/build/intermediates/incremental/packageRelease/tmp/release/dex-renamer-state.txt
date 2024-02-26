@@ -1,0 +1,4 @@
+#Mon Feb 26 18:07:31 NOVT 2024
+base.0=/home/Aurora/Aurora/Godot-Simple-Space/SimpleSpace/android/build/build/intermediates/dex/release/mergeDexRelease/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

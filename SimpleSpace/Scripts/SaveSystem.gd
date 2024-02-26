@@ -8,14 +8,15 @@ var score_data = {}
 onready var best_score = get_parent().find_node("record")
 
 func config_create():
+	print()
 	var file = File.new()
-	if !file.file_exists("user://params.cfg"):
-		file.open("user://params.cfg", file.WRITE)
+	if !file.file_exists("user://params.save"):
+		file.open("user://params.save", file.WRITE)
 		file.close()
 	config.set_value("ver1", "score", 0) 
 	config.set_value("ver2", "sound_volume", 0) 
 	config.set_value("ver2", "music_volume", 0) 
-	config.save("user://params.cfg")
+	config.save("user://params.save")
 
 func update_score(var new_score: int = 0):
 	if(new_score > high_score):
@@ -24,10 +25,10 @@ func update_score(var new_score: int = 0):
 		best_score.bbcode_text  = "[center]Рекорд: " + String(high_score)
 	config.set_value("ver2", "sound_volume", sound_volume) 
 	config.set_value("ver2", "music_volume", music_volume) 
-	config.save("user://params.cfg")
+	config.save("user://params.save")
 
 func load_config():
-	var err = config.load("user://params.cfg")
+	var err = config.load("user://params.save")
 
 	if err != OK:
 		config_create()
@@ -41,8 +42,10 @@ func load_config():
 func set_params():
 	pass
 
+
 func _ready():
 	load_config() 
-	# best_score.bbcode_text = OS.get_user_data_dir()
-	best_score.bbcode_text  = "[center]Рекорд: " + String(high_score) 
+	#best_score.bbcode_text = OS.get_user_data_dir()
+	print(OS.get_user_data_dir())
+	best_score.bbcode_text  = "[center]Рекорд: " +  String(high_score) 
 	pass 
